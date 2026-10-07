@@ -1,0 +1,38 @@
+# Java / Spring Boot build output
+**/target/
+
+# IntelliJ / IDE files
+**/.idea/
+**/*.iml
+**/.classpath
+**/.project
+**/.settings/
+
+# Node / frontend dependencies and builds
+**/node_modules/
+**/dist/
+**/.vite/
+**/.vite-temp/
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local Spring configuration
+**/application-local.properties
+**/application-local.yml
+**/application-local.yaml
+
+# Archives
+*.zip
+
+# Operating-system files
+.DS_Store
+Thumbs.db
