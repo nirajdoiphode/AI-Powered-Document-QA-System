@@ -8,6 +8,8 @@
 **/.project
 **/.settings/
 
+
+
 # Node / frontend dependencies and builds
 **/node_modules/
 **/dist/
@@ -29,6 +31,8 @@ pnpm-debug.log*
 **/application-local.properties
 **/application-local.yml
 **/application-local.yaml
+
+/NexAi/
 
 # Archives
 *.zip

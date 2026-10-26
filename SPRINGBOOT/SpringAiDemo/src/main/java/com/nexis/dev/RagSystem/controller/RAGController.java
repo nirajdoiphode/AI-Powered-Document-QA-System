@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HexFormat;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/documents")
@@ -54,10 +55,13 @@ public class RAGController {
                 if (!documentInjection.alreadyIndexed(fileHash))
                 {
                     Tika tika = new Tika();
+                    tika.setMaxStringLength(-1);
 
                     String extractedText = tika.parseToString(
                             file.getInputStream()
                     );
+
+                    System.out.println("Length: "+extractedText.length());
 
 //            System.out.println(extractedText);
 
@@ -86,6 +90,12 @@ public class RAGController {
 
     }
 
+    @GetMapping("/progress")
+    public ResponseEntity<Map<String, Object>> getProgress() {
+        return ResponseEntity.ok(
+                documentInjection.getProgress()
+        );
+    }
 
     private String calculateFileHash(byte[] fileBytes)
     {

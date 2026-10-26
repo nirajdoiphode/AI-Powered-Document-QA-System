@@ -12,15 +12,16 @@ public class OllamaController {
 
     ChatClient chatClient;
 
-    public OllamaController(OllamaChatModel chatmodel) {
-
-        this.chatClient=ChatClient.create(chatmodel);
-    }
+//    public OllamaController(OllamaChatModel chatmodel) {
+//
+//        this.chatClient=ChatClient.create(chatmodel);
+//    }
 
     @GetMapping("/{message}")
     public ResponseEntity<String> getAnswer(@PathVariable String message)
     {
         String response=chatClient.prompt(message).call().content();
+
         return ResponseEntity.ok(response);
 
     }

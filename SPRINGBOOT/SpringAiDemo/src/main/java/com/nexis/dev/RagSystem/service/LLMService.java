@@ -39,7 +39,7 @@ public class LLMService {
     public String getReponseService(String userprompt) {
 
         ChatResponse response = chatClient.prompt(userprompt).call().chatResponse();
-        System.out.println("Response:=-==:     "+response.getResults().get(0).getOutput().getText());
+//        System.out.println("Response:=-==:     "+response.getResults().get(0).getOutput().getText());
 //        System.out.println("Model name:  "+aiResponseDTO.getModel());
 
         return response.getResults().get(0).getOutput().getText();
