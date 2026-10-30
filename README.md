@@ -20,10 +20,12 @@ The main workflow is:
 
 ## Demonstration Video
 
-Add the demonstration video link here:
+demonstration video link here:
 
 [Watch the project demonstration](https://youtu.be/LKu5yQoGkH8?si=y5N1a15A7jonCRUQ)
-
+<br><br>
+Live Project: https://nexaigen2.vercel.app/
+---
 
 ## Screenshots
 
@@ -228,9 +230,4 @@ The configured maximum upload size is 20 MB. Confirm that the file is readable a
 
 Confirm that Spring Boot is running on port `8080` and the UI is running on port `3000`.
 
-## Security Notes
-
-- Never commit Gemini or Pinecone API keys.
-- Rotate credentials that were previously committed or exposed.
-- Keep `.env` and local Spring configuration files out of Git.
-- Review uploaded documents before sending them to external AI and vector-database services.
+---
